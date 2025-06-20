@@ -2,6 +2,12 @@
 
 A real-time drone telemetry simulator built with Qt (Widgets) that demonstrates modular, multithreaded architecture and common design patterns. This application simulates and displays real-time telemetry data from a single drone with realistic movement patterns and failure simulation capabilities.
 
+![image_alt](https://github.com/harbans-singh/BotLabDynamics/blob/46de27e49b4e68c9f0a9bdc27e0e80d9ce5d1d1b/Img1.png)
+![image_alt](https://github.com/harbans-singh/BotLabDynamics/blob/46de27e49b4e68c9f0a9bdc27e0e80d9ce5d1d1b/Img2.png)
+![image_alt](https://github.com/harbans-singh/BotLabDynamics/blob/46de27e49b4e68c9f0a9bdc27e0e80d9ce5d1d1b/Img3.png)
+![image_alt](https://github.com/harbans-singh/BotLabDynamics/blob/46de27e49b4e68c9f0a9bdc27e0e80d9ce5d1d1b/Img4.png)
+![image_alt](https://github.com/harbans-singh/BotLabDynamics/blob/46de27e49b4e68c9f0a9bdc27e0e80d9ce5d1d1b/Img5.png)
+
 ## Features
 
 ### Telemetry Display
