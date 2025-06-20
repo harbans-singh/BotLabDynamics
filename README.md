@@ -129,26 +129,12 @@ src/
    git clone <repository-url>
    cd DroneTelemetrySimulator
    ```
-
-2. **Set Qt path** (Windows with MinGW):
+2. **Build the project**:
    ```bash
-   set CMAKE_PREFIX_PATH=C:\Qt\6.9.0\mingw_64
-   set PATH=C:\Qt\Tools\mingw1310_64\bin;%PATH%
+   Run build.bat
    ```
 
-3. **Create and configure build**:
-   ```bash
-   mkdir build
-   cd build
-   cmake .. -G "MinGW Makefiles" -DCMAKE_PREFIX_PATH=%CMAKE_PREFIX_PATH%
-   ```
-
-4. **Build the project**:
-   ```bash
-   cmake --build .
-   ```
-
-5. **Run the application**:
+3. **Run the application**:
    ```bash
    cd bin
    ./DroneTelemetrySimulator.exe
