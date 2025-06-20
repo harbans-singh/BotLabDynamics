@@ -1,0 +1,89 @@
+# Manual Test Cases for Drone Telemetry Simulator
+
+## 1. Drone Creation and Initialization
+
+| Test Case | Steps | Expected Result |
+|-----------|-------|----------------|
+| TC1.1 | Start the application | The main window opens with all telemetry fields populated. |
+| TC1.2 | Observe the Drone ID, Latitude, Longitude, Altitude, Heading, Speed, Battery, and GPS Fix fields | Drone ID is shown, coordinates default to New Delhi, battery is 100%, GPS Fix is "3D Fix". |
+
+---
+
+## 2. Start/Stop Simulation
+
+| Test Case | Steps | Expected Result |
+|-----------|-------|----------------|
+| TC2.1 | Click "Start Simulation" | The button changes to "Stop Simulation", telemetry values (lat/lon/alt/heading/speed/battery) update every 500ms. |
+| TC2.2 | Click "Stop Simulation" | Simulation stops, values freeze, button changes to "Start Simulation". |
+
+---
+
+## 3. Movement Strategies
+
+| Test Case | Steps | Expected Result |
+|-----------|-------|----------------|
+| TC3.1 | With simulation running, select "Hover" from the Movement Strategy dropdown | Drone's position changes minimally, speed remains low. |
+| TC3.2 | Select "Random Walk" from the dropdown | Drone's position changes more significantly, speed increases, heading changes more. |
+
+---
+
+## 4. Battery Drain
+
+| Test Case | Steps | Expected Result |
+|-----------|-------|----------------|
+| TC4.1 | Start simulation and observe battery | Battery percentage decreases slowly over time. |
+| TC4.2 | When battery drops to 20% or below | A warning is shown, battery bar turns yellow or red. |
+
+---
+
+## 5. Failure Simulation
+
+| Test Case | Steps | Expected Result |
+|-----------|-------|----------------|
+| TC5.1 | Click "Simulate Failure" | GPS Fix changes to "No Fix", battery drains rapidly, status shows "Failure Mode Active". |
+| TC5.2 | Click "Reset Failure" | GPS Fix returns to "3D Fix", battery drain returns to normal, status shows "Normal Operation". |
+
+---
+
+## 6. GPS Fix Status
+
+| Test Case | Steps | Expected Result |
+|-----------|-------|----------------|
+| TC6.1 | During normal simulation | GPS Fix is "3D Fix" (green). |
+| TC6.2 | During failure simulation | GPS Fix is "No Fix" (red). |
+
+---
+
+## 7. Logger Functionality
+
+| Test Case | Steps | Expected Result |
+|-----------|-------|----------------|
+| TC7.1 | Start and stop the application | A new log file is created in the `logs` folder in the build directory. |
+| TC7.2 | Perform actions (start/stop simulation, simulate failure, change strategy) | Each action is logged with a timestamp and log level. |
+
+---
+
+## 8. UI Status and Warnings
+
+| Test Case | Steps | Expected Result |
+|-----------|-------|----------------|
+| TC8.1 | Let battery drop below 20% | Warning dialog appears, status bar shows "Low Battery". |
+| TC8.2 | Simulate GPS loss | Warning dialog appears, status bar shows "GPS Fix Lost". |
+
+---
+
+## 9. Application Stability
+
+| Test Case | Steps | Expected Result |
+|-----------|-------|----------------|
+| TC9.1 | Start/stop simulation repeatedly | No crashes or freezes. |
+| TC9.2 | Switch strategies during simulation | No crashes, strategy changes reflected in movement. |
+| TC9.3 | Simulate and reset failure multiple times | No crashes, system recovers as expected. |
+
+---
+
+## 10. Default Location
+
+| Test Case | Steps | Expected Result |
+|-----------|-------|----------------|
+| TC10.1 | Start the application | Latitude is 28.6139, Longitude is 77.2090 (New Delhi). | 
